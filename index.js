@@ -73,3 +73,17 @@ const timer = setInterval(() => {
 const chalk = require("chalk");
 
 console.log(chalk.red("This is in red color"));
+
+// write in other file
+// input from terminal
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question(`What is your name ?`, (name) => {
+  console.log(`Hi ${name}`);
+  rl.close();
+});
